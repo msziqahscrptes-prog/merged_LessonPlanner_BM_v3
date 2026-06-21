@@ -5,8 +5,8 @@ from docx.shared import Pt, Inches
 from io import BytesIO
 
 # --- 1. KONFIGURASI HALAMAN ---
-st.set_page_config(page_title="Perancang Master Pelajaran", layout="wide")
-st.title("🎓 PTES Penjana Rancangan Mengajar Universal & PEDATI (BM)")
+st.set_page_config(page_title="Perancang Integrasi Pengajaran", layout="wide")
+st.title("🎓 Integrasi Penjana Rancangan Mengajar Harian")
 
 # --- INPUT KUNCI API (DI BAHAGIAN ATAS) ---
 user_api_key = st.text_input(
@@ -253,7 +253,7 @@ if 'adv_plan_out_bm' in st.session_state:
     st.subheader("Pratonton Draf AI")
     st.text_area("Kandungan", st.session_state['adv_plan_out_bm'], height=400)
     doc_file = create_word_export_bm(u_topic, u_syllabus, st.session_state['adv_plan_out_bm'])
-    st.download_button("📥 Muat Turun Versi Word (.docx)", doc_file, f"Universal_RM_{u_topic}.docx")
+    st.download_button("📥 Muat Turun Versi Word (.docx)", doc_file, f"Integrasi_RPH_{u_topic}.docx")
 
 st.markdown("---")
-st.caption("Perancang Pelajaran Universal 3.0 (BM) | Programmer: Hjh Nurul Haziqah Hj Nordin | © 2026 Brunei's Education Innovation")
+st.caption("Rancangan Pengajaran Harian 3.0 (BM) | Pencipta: Hjh Nurul Haziqah Hj Nordin | © 2026 Education Innovation")
